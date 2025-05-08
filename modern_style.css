@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #2c3e50;
+  --aside-bg: #2c3e50;
+  --card-bg: #ffffff;
+  --input-bg: #f9f9f9;
+  --input-color: #000000;
+  --transition: 0.25s ease;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --aside-bg: #15161c;
+  --card-bg: #2b2c3b;
+  --input-bg: #3a3b4d;
+  --input-color: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+aside {
+  width: 250px;
+  background: var(--aside-bg);
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+aside h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+#carList {
+  list-style: none;
+  padding: 0;
+}
+
+#carList li {
+  background-color: #3b5164;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#carList li:hover {
+  background-color: #4b6178;
+}
+
+#carList button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+main h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+form input,
+form select {
+  padding: 8px;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: var(--input-bg);
+  color: var(--input-color);
+  transition: background-color var(--transition), color var(--transition);
+  font-size: 0.9rem;
+}
+
+form button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color var(--transition);
+}
+
+form button:hover {
+  background-color: #219150;
+}
+
+#carDetails,
+#expenseSection {
+  margin-top: 25px;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: background-color var(--transition);
+}
+
+#carDetails h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#editBtn {
+  margin-top: 12px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#editBtn:hover {
+  background-color: #d68910;
+}
+
+#exportBtn {
+  margin-top: 18px;
+  padding: 9px 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#exportBtn:hover {
+  background-color: #2980b9;
+}
+
+ul#expenseList {
+  padding-left: 20px;
+}
+
+p#totalExpense {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#extrasSection {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: background-color 0.3s ease;
+}
+
+#extrasSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#extrasSection h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+#extrasSection div > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+#extrasSection input[type="checkbox"] {
+  accent-color: #27ae60;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
