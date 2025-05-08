@@ -75,7 +75,14 @@
 
 @media (max-width: 768px) {
   aside {
-    max-height: 200px;
+    max-height: 220px;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
+  #carList {
+    max-height: 180px;
     overflow-y: auto;
+    padding-right: 5px;
   }
 }
