@@ -72,3 +72,10 @@
     font-size: 0.95rem;
   }
 }
+
+@media (max-width: 768px) {
+  aside {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
